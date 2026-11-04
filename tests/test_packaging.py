@@ -113,6 +113,11 @@ class TestInstaller(unittest.TestCase):
             for key in ("WelcomeLabel1", "WelcomeLabel2", "FinishedHeadingLabel", "FinishedLabel", "OpenOwlCheck"):
                 self.assertIn(f"{lang}.{key}=", self.iss)
 
+    def test_no_duplicate_prompts(self):
+        # Inno Setup already adds "Click Next..." and "Click Finish..." under these texts
+        for phrase in ("Click Next", "Siguiente para continuar", "Avançar para continuar", "Click Finish", "Concluir para sair"):
+            self.assertNotIn(phrase, self.iss)
+
     def test_owlcheck_look(self):
         for rel in ("wizard-large-100.bmp", "wizard-large-200.bmp", "wizard-small-100.bmp", "fonts/Silkscreen-Bold.ttf",
                     "fonts/Rubik-Regular.ttf", "fonts/OFL-Silkscreen.txt", "fonts/OFL-Rubik.txt"):

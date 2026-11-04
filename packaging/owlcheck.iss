@@ -64,20 +64,20 @@ Name: "brazilianportuguese"; MessagesFile: "compiler:Languages\BrazilianPortugue
 
 [Messages]
 english.WelcomeLabel1=WELCOME TO OWLCHECK
-english.WelcomeLabel2=This assistant will install [name/ver] on your computer.%n%nIt installs for your user only, without an administrator password, and doesn't change anything outside its own folder.%n%nClick Next to continue.
+english.WelcomeLabel2=This assistant will install [name/ver] on your computer.%n%nIt installs for your user only, without an administrator password, and doesn't change anything outside its own folder.
 english.FinishedHeadingLabel=ALL SET!
-english.FinishedLabel=OwlCheck is installed on your computer. You'll also find it in the Start menu.%n%nClick Finish to exit.
-english.FinishedLabelNoIcons=OwlCheck is installed on your computer.%n%nClick Finish to exit.
+english.FinishedLabel=OwlCheck is installed on your computer. You'll also find it in the Start menu.
+english.FinishedLabelNoIcons=OwlCheck is installed on your computer.
 spanish.WelcomeLabel1=BIENVENIDO A OWLCHECK
-spanish.WelcomeLabel2=Este asistente va a instalar [name/ver] en tu computadora.%n%nSe instala solo para tu usuario, sin contraseña de administrador, y no cambia nada fuera de su carpeta.%n%nHaz clic en Siguiente para continuar.
+spanish.WelcomeLabel2=Este asistente va a instalar [name/ver] en tu computadora.%n%nSe instala solo para tu usuario, sin contraseña de administrador, y no cambia nada fuera de su carpeta.
 spanish.FinishedHeadingLabel=¡TODO LISTO!
-spanish.FinishedLabel=OwlCheck ya está instalado en tu computadora. También lo encuentras en el menú Inicio.%n%nHaz clic en Finalizar para salir.
-spanish.FinishedLabelNoIcons=OwlCheck ya está instalado en tu computadora.%n%nHaz clic en Finalizar para salir.
+spanish.FinishedLabel=OwlCheck ya está instalado en tu computadora. También lo encuentras en el menú Inicio.
+spanish.FinishedLabelNoIcons=OwlCheck ya está instalado en tu computadora.
 brazilianportuguese.WelcomeLabel1=BEM-VINDO AO OWLCHECK
-brazilianportuguese.WelcomeLabel2=Este assistente vai instalar o [name/ver] no seu computador.%n%nEle instala só para o seu usuário, sem pedir senha de administrador, e não altera nada fora da pasta dele.%n%nClique em Avançar para continuar.
+brazilianportuguese.WelcomeLabel2=Este assistente vai instalar o [name/ver] no seu computador.%n%nEle instala só para o seu usuário, sem pedir senha de administrador, e não altera nada fora da pasta dele.
 brazilianportuguese.FinishedHeadingLabel=TUDO PRONTO!
-brazilianportuguese.FinishedLabel=O OwlCheck foi instalado no seu computador. Você também encontra ele no menu Iniciar.%n%nClique em Concluir para sair.
-brazilianportuguese.FinishedLabelNoIcons=O OwlCheck foi instalado no seu computador.%n%nClique em Concluir para sair.
+brazilianportuguese.FinishedLabel=O OwlCheck foi instalado no seu computador. Você também encontra ele no menu Iniciar.
+brazilianportuguese.FinishedLabelNoIcons=O OwlCheck foi instalado no seu computador.
 
 [CustomMessages]
 english.OpenOwlCheck=Open OwlCheck
