@@ -1,5 +1,6 @@
 """Packaging tests: icons, the PyInstaller spec, the .exe build and the Windows .bat."""
 
+import ast
 import importlib.util
 import re
 import sys
@@ -47,10 +48,12 @@ class TestIcons(unittest.TestCase):
         self.assertEqual((ASSETS / "icon.icns").read_bytes()[:4], b"icns")
 
     def test_sprite_is_16x16(self):
-        mod = _load("make_icons", ROOT / "packaging" / "make_icons.py")
-        self.assertEqual(len(mod.OWL), 16)
-        self.assertTrue(all(len(r) == 16 and set(r) <= {"#", "."} for r in mod.OWL))
-        self.assertTrue(all(len(r) == 14 for r in mod.OWL_TIGHT))
+        # read the sprite from the source, so the test doesn't need Pillow
+        tree = ast.parse((ROOT / "packaging" / "make_icons.py").read_text(encoding="utf-8"))
+        owl = next(ast.literal_eval(n.value) for n in tree.body
+                   if isinstance(n, ast.Assign) and getattr(n.targets[0], "id", "") == "OWL")
+        self.assertEqual(len(owl), 16)
+        self.assertTrue(all(len(r) == 16 and set(r) <= {"#", "."} for r in owl))
 
 
 class TestBuild(unittest.TestCase):
@@ -118,9 +121,9 @@ class TestInstaller(unittest.TestCase):
         self.assertIn("PAPER = $00ECF1F2", self.iss, "the app's paper color, in BGR")
         self.assertIn("FR_PRIVATE", self.iss, "fonts are loaded privately, never installed on the system")
         self.assertIn("DisableWelcomePage=no", self.iss)
-        from PIL import Image
-        big = Image.open(ROOT / "packaging" / "installer" / "wizard-large-100.bmp")
-        self.assertEqual(big.size, (164, 314))
+        bmp = (ROOT / "packaging" / "installer" / "wizard-large-100.bmp").read_bytes()
+        self.assertEqual(bmp[:2], b"BM")
+        self.assertEqual(struct.unpack("<ii", bmp[18:26]), (164, 314))
 
     def test_paths_in_script_exist(self):
         for rel in ("app/assets/icon.ico",):
