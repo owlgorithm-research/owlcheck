@@ -1,0 +1,3 @@
+# Only the desktop app needs these. owlcheck.py itself has no dependencies.
+pywebview>=5.4
+pywebview[qt]>=5.4; sys_platform == "linux"

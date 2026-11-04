@@ -1,0 +1,2 @@
+# Used to build the executable. Install OwlCheck.bat installs it for you.
+pyinstaller>=6.10,<7
