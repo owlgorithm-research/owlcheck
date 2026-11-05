@@ -195,17 +195,6 @@ python -m unittest discover -s tests -v
 
 All the text lives in two places: the catalog at the top of `owlcheck.py` and the `STR` object in `app/ui/index.html`. A test fails if any language is missing a string.
 
-## Code signing policy
-
-Free code signing provided by [SignPath.io](https://about.signpath.io), certificate by [SignPath Foundation](https://signpath.org).
-
-- **Committers and reviewers:** [members of Owlgorithm Research](https://github.com/orgs/owlgorithm-research/people)
-- **Approvers:** [owners of Owlgorithm Research](https://github.com/orgs/owlgorithm-research/people?query=role%3Aowner)
-
-Only files built by GitHub Actions from this repository are signed, and every signing request is approved by hand.
-
-**Privacy:** OwlCheck doesn't send any information to other networked systems. It makes no network connections at all; see [Privacy](#privacy).
-
 ## Credits
 
 Made by **PΛTTRN** ([@bypattern](https://github.com/bypattern)) at **Owlgorithm Research**.

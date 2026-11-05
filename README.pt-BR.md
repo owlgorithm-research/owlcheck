@@ -195,17 +195,6 @@ python -m unittest discover -s tests -v
 
 Todos os textos ficam em dois lugares: o catálogo no começo do `owlcheck.py` e o objeto `STR` em `app/ui/index.html`. Um teste falha se faltar algum texto em algum idioma.
 
-## Política de assinatura de código
-
-Assinatura de código gratuita oferecida por [SignPath.io](https://about.signpath.io), com certificado da [SignPath Foundation](https://signpath.org).
-
-- **Quem envia e revisa código:** [membros da Owlgorithm Research](https://github.com/orgs/owlgorithm-research/people)
-- **Quem aprova as assinaturas:** [donos da Owlgorithm Research](https://github.com/orgs/owlgorithm-research/people?query=role%3Aowner)
-
-Só são assinados arquivos gerados pelo GitHub Actions a partir deste repositório, e cada pedido de assinatura é aprovado manualmente.
-
-**Privacidade:** o OwlCheck não envia nenhuma informação para outros sistemas em rede. Ele não faz nenhuma conexão de rede; veja [Privacidade](#privacidade).
-
 ## Créditos
 
 Feito por **PΛTTRN** ([@bypattern](https://github.com/bypattern)) na **Owlgorithm Research**.
